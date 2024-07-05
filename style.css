@@ -1,0 +1,390 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    background-image: url(./img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.navBarTitle {
+    color: white;
+    margin: 0;
+}
+
+.navBar {
+    background: rgb(7, 21, 89);
+    background: radial-gradient(circle, rgba(7, 21, 89, 1) 0%, rgba(0, 1, 4, 0.22452731092436973) 100%);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    box-shadow: 0 4px 60px rgba(32, 225, 0, 1);
+}
+
+a {
+    text-decoration: none;
+}
+
+.pokedexLogo {
+    height: 50px;
+    margin-left: 48px;
+}
+
+main {
+    padding: 80px 10%;
+}
+
+.allPokemons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.pokemonSmallCard {
+    color: white;
+    border-radius: 24px;
+    width: 240px;
+    height: 140px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 0.6s ease-in-out;
+    transition: filter 0.5s ease-in-out;
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+}
+
+.pokemonSmallCard:hover {
+    transform: scale(1.1);
+    filter: brightness(120%);
+}
+
+.pokemonSmallCardInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pokemonSmallCardImage {
+    height: 110px;
+}
+
+.pokemonSmallCardTypes {
+    border-radius: 24px;
+    padding: 4px 8px;
+    font-size: 14px;
+    margin-bottom: 3px;
+    text-align: center;
+}
+
+.pokemonSmallCardUpperContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.pokemonSmallCardName {
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.pokemonSmallCardNumber {
+    font-size: 20px;
+    margin-top: -10px;
+}
+
+.buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #071455;
+    border: 2px solid #2980b9;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #2980b9;
+}
+
+.bigCardContainer {
+    border: 2px solid white;
+    border-radius: 24px;
+    box-shadow: 0 0 100px rgba(32, 225, 0, 1);
+    width: 70vw;
+}
+
+.bigCardPage {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bigCardUpper {
+    background-color: #F86C6C;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 55vh;
+    border-top-right-radius: 24px;
+    border-top-left-radius: 24px;
+}
+
+.bigCardNameAndIdContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+}
+
+.pokemonBigCardNumber {
+    margin: 0 100px 0 0;
+}
+
+.bigCardName {
+    margin: 24px 0px 24px 100px;
+}
+
+.bigCardTypesContainer {
+    display: flex;
+    width: 100%;
+    gap: 8px;
+    margin-left: 200px;
+}
+
+.pokemonBigCardTypes {
+    text-align: center;
+    border-radius: 24px;
+    padding: 4px 8px;
+    font-size: 18px;
+    color: white;
+}
+
+.bigCardImg {
+    height: 400px;
+}
+
+.imgContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: -80px;
+}
+
+.arrow {
+    font-size: 54px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 0px 18px;
+    margin: 0 10px;
+}
+
+.arrow:hover {
+    color: white;
+}
+
+h3 {
+    margin: 0;
+    text-align: center;
+}
+
+.bigCardLower {
+    background-color: white;
+    height: 40vh;
+    border-radius: 24px;
+    margin-top: -40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bigCardLowerTitle {
+    color: rgba(0, 0, 0, 0.5);
+    padding-top: 24px;
+    padding-bottom: 12px;
+}
+
+.chartContainer {
+    position: relative;
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 1000px) {
+    .bigCardNameAndIdContainer {
+        font-size: 24px;
+    }
+
+    .bigCardImg {
+        height: 300px;
+    }
+
+    .imgContainer {
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 680px) {
+    .bigCardUpper {
+        height: 40vh;
+    }
+
+    .bigCardLower {
+        height: 35vh;
+    }
+
+    .bigCardImg {
+        height: 250px;
+    }
+
+    .imgContainer {
+        margin-top: -50px;
+    }
+}
+
+@media (max-width: 650px) {
+    .bigCardName {
+        margin: 24px 0px 24px 30px;
+    }
+
+    .pokemonBigCardNumber {
+        margin: 0 30px 0 0;
+    }
+
+    .bigCardTypesContainer {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: 8px;
+        margin-left: 0px;
+    }
+
+    @media (max-width: 610px) {
+        .bigCardImg {
+            height: 200px;
+        }
+
+        .imgContainer {
+            margin-top: 0px;
+        }
+    }
+
+    @media (max-width: 530px) {
+        .arrow {
+            margin: 0;
+        }
+
+        .bigCardImg {
+            height: 180px;
+        }
+    }
+
+    @media (max-width: 450px) {
+        .bigCardUpper {
+            height: 35vh;
+        }
+
+        .bigCardLower {
+            height: 25vh;
+        }
+
+        .bigCardNameAndIdContainer {
+            font-size: 16px;
+        }
+
+        .bigCardName {
+            margin: 12px 0 12px 24px;
+        }
+
+        .pokemonBigCardNumber {
+            margin: 0 24px 0 0;
+        }
+
+        .bigCardImg {
+            height: 150px;
+        }
+
+        .imgContainer {
+            margin-top: 36px;
+        }
+
+        .pokemonBigCardTypes {
+            font-size: 12px;
+        }
+
+        .bigCardLowerTitle {
+            padding-top: 24px;
+            padding-bottom: 0;
+        }
+
+        .chartContainer {
+            gap: 0;
+            height: 100%;
+        }
+    }
+
+    @media (max-width: 400px) {
+
+        .arrow {
+            padding: 12px;
+            font-size: 36px;
+        }
+
+        .bigCardImg {
+            padding-bottom: 40px;
+        }
+    }
+
+    @media (max-width: 340px) {
+        .bigCardImg {
+            height: 137px;
+        }
+
+        .bigCardUpper {
+            height: 30vh;
+        }
+
+        .bigCardLower {
+            height: 20vh;
+        }
+
+        .bigCardLowerTitle {
+            padding-top: 10px;
+        }
+    }
+}

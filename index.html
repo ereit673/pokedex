@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeDex</title>
+    <link rel="icon" type="image/x-icon" href="./img/pokeball.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body onload="init()">
+    <div class="navBar">
+        <a href="index.html"><img class="pokedexLogo" src="./img/pokeball.png" alt=""></a>
+        <a href="index.html">
+            <h1 class="navBarTitle">pokedex</h1>
+        </a>
+    </div>
+    <main>
+        <div id="allPokemons" class="allPokemons">
+        </div>
+        <div class="buttonContainer">
+            <button id="loadMoreButton" class="button" onclick="loadMore()">Lade Weitere</button>
+        </div>
+
+        <div id="bigCardPage" class="bigCardPage" style="display: none" onclick="closeBigCardPage()">
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="render.js"></script>
+    <script src="chart.js"></script>
+</body>
+
+</html>
